@@ -7,6 +7,3 @@ RUN mkdir /src
 CMD python manage.py collectstatic --no-input;python manage.py migrate; gunicorn --timeout 120 lapandilla.wsgi -b 0.0.0.0:8000;
 
 WORKDIR /src
-
-
-
