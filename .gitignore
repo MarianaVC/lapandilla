@@ -1,2 +1,3 @@
 src/lapandilla/__pycache__
 src/static
+src/lapandilla/settings.py
