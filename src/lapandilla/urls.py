@@ -22,8 +22,10 @@ admin.site.site_title = "La pandilla Admin Portal"
 admin.site.index_title = "Welcome to la pandilla Admin Portal :) "
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import IndexView
 
 urlpatterns = [
+    url(r'^', IndexView.as_view()),
     url(r'^admin/', admin.site.urls),
     url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
     url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS    
